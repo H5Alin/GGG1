@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>弦上有春秋</title>
+		<style type="text/css">
+			body{
+				background-image: url(./images/bigbang.jpg);
+				background-size: 100% 100% ;
+				height: 100%;
+			}
+			html{
+				height: 100%;
+			}
+			@keyframes myfirst {
+				0%{opacity: 0}
+				25%{opacity: 100}
+				50%{opacity: 0}
+				100%{opacity: 0}
+			}
+			h1{
+				animation: myfirst 10s infinite;
+			}
+			@keyframes myp {
+				0%{opacity: 0}
+				50%{opacity: 0}
+				75%{opacity: 100}
+				100%{opacity: 0}
+			}
+			p{
+				font-size: 100px;
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				animation: myp 10s infinite;
+			}
+			#o{
+				animation: myfirst 10s infinite;
+			}
+			#k{
+				animation:myp 10s infinite;
+			}
+		</style>
+	</head>
+	<body>
+	<audio src="wav/陈一发儿 - 弦上有春秋.mp3" controls="controls" autoplay="autoplay" ></audio>
+		<p id="o">弦上有春秋</p>
+		<p id="k">檐下一束翠藤 捆绑半截流年</p>
+	</body>
+</html>
