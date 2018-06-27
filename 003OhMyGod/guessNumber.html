@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<p id="demo"></p>
+</body>
+</html>
+<script>
+    var a = Math.random()
+    var binggo = false;
+
+    function guess() {
+        if (binggo) {
+            return;
+        }
+        var guess = prompt("色子是多少？");
+        console.info("random====" + a);
+        console.info("random====" + guess);
+        var diff = Math.abs(a - guess);
+        console.info("diff====" + diff);
+        if (guess == a) {
+            document.getElementById("demo").innerHTML = "中了" + "<img src=\"images/" + a + ".jpg\"/>";
+        } else if (guess > a&&diff>1) {
+            document.getElementById("demo").innerHTML = "太大了";
+        } else if (guess > a&&diff<=1){
+            document.getElementById("demo").innerHTML = "有点大了";
+        }else if (guess < a&&diff>1) {
+            document.getElementById("demo").innerHTML = "太小了";
+        } else if (guess < a&&diff<=1){
+            document.getElementById("demo").innerHTML = "有点小了";
+        }
+    }
+
+    a = Math.floor(a * 6) + 1;
+    console.info(a);
+    // document.write(a);
+    guess();
+    guess();
+    guess();
+</script>

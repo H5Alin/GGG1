@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function isinteger(obj){
+            return obj%1===0;
+        }
+        var price=10,count;//单价
+        count=prompt("您要多少杯")//数量
+        if(isNaN(count)){
+            document.write()("请输入数字");
+        }else {
+            if (isinteger(count)){
+        if (count%2==0){
+            totalprice=count*price*3/4;
+        }else{
+            totalprice= count*price*0.75+price/4;
+        }             }
+        else {
+                    alert("请输入整数");
+            }
+}
+
+    alert("您消费了"+totalprice+"元");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
