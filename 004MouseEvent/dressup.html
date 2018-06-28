@@ -25,7 +25,7 @@
         #bgmButton{
             height: 100px;
             width: 100px;
-            margin: 0 auto;
+            float:right;
             background-image: url('images/music.gif');
         }
     </style>
@@ -42,8 +42,10 @@
 <div id="upper"></div>
     <div id="lower"></div>
 </div>
-<audio id="bgm" src="mp3/笨笨口琴 - 卡农【我的野蛮女友插曲】6610H C调（Cover V.A.）.mp3" preload="auto" autoplay="autoplay" loop="loop"></audio>
-<div id="bgmButton" onclick="control()"></div>
+
+<div id="bgmButton" onclick="control()">
+    <audio id="bgm" src="mp3/笨笨口琴 - 卡农【我的野蛮女友插曲】6610H C调（Cover V.A.）.mp3" preload="auto" autoplay="autoplay" loop="loop"></audio>
+</div>
 </body>
 <script>
     function suit() {
@@ -64,10 +66,11 @@
     function control() {
         if (document.getElementById("bgm").paused) {
             document.getElementById("bgm").play();
-            document.getElementById("bgmButton").style.backgroundImage="url('images/music.gif')";
+            document.getElementById("bgmButton").style.backgroundImage = "url('images/music.gif')";
         } else {
             document.getElementById("bgm").pause();
-            document.getElementById("bgmButton").style.backgroundImage="url('images/stoped.gif')";
+            document.getElementById("bgmButton").style.backgroundImage = "url('images/stoped.gif')";
         }
+    }
 </script>
 </html>
