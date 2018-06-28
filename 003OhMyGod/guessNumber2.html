@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="message"></div>
+</body>
+</html>
+<script>
+    var a = Math.random()
+    var binggo = false;
+    var str;
+
+    function guess() {
+        if (binggo) {
+            return;
+        }
+        var guess = prompt("色子是多少？");
+        if (!Number.isInteger(guess/1)||guess>6||guess<1) {
+            document.getElementById("message").innerHTML = "输入有误";
+            return;
+        }
+        console.info("random====" + a);
+        console.info("random====" + guess);
+        var diff = Math.abs(a - guess);
+        console.info("diff====" + diff);
+        if (guess == a) {
+            str = "中了" + "<img src=\"images/" + a + ".jpg\"/>";
+            binggo = true;
+        }
+        else if (guess > a) {
+            if (diff > 1) {
+                str = "太大了";
+            } else {
+                str = "有点大了";
+            }
+        }
+        else  {
+            if (diff > 1) {
+                str = "太小了";
+            } else {
+                str = "有点小了";
+            }
+        }
+        document.getElementById("message").innerHTML = str;
+    }
+
+    a = Math.floor(a * 6) + 1;
+    console.info(a);
+    // document.write(a);
+    guess();
+    guess();
+    guess();
+</script>
